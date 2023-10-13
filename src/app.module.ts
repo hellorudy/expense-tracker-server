@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TransactionsModule } from './transactions/transactions.module';
+import { TransactionModule } from './transaction/transaction.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    TransactionsModule,
+    TransactionModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       database: 'postgres',
